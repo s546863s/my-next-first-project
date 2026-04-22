@@ -1,8 +1,6 @@
-import Link from 'next/link';
 import React from 'react';
 
-const BlogsPage = () => {
-     const blogs = [
+ const blogs = [
         {
             id: 1,
             title: "Understanding JavaScript Closures",
@@ -36,21 +34,25 @@ const BlogsPage = () => {
             content: "Node.js allows you to run JavaScript on the server side, making it a great choice for building scalable backend applications."
         }
     ];
+
+const  BlogDetailsPage = async ({params}) => {
+    const {blogid} = await params;
+
+    const blog = blogs.find(blog => blog.id === parseInt(blogid))
+
+    console.log(blog)
+
     return (
         <div>
-           
-            {blogs.map(blog => <div key={blog.id}>
-                <h3 className="text-4xl font-bold mb-2">{blog.title}</h3>
-                <Link href={`/blogs/${blog.id}`} className='btn  btn-primary '>Show details</Link>
-            </div>)}
-
-<h1 className='bg-yellow-500 text-blue-500'>This is my code here </h1>
+            <h1>Blog Details coming Soon</h1>
             {
-                
+                blog && <div>
+                    <h2 className='text-2xl'>{blog.title}</h2>
+                    <p>{blog.content}</p>
+                    </div>
             }
-           
         </div>
     );
 };
 
-export default BlogsPage;
+export default BlogDetailsPage;
