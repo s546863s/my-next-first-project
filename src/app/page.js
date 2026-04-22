@@ -7,5 +7,6 @@ export default function Home() {
       <h1 className="bg-sky-500">This is  Home page</h1>
       
     </div>
+    
   );
 }
