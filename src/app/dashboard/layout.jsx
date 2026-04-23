@@ -7,6 +7,7 @@ const DashboardLayout = ({children}) => {
     <Link href="/dashboard" > Dashboard </Link>
     <Link href="/dashboard/profile" > Profile </Link>
     <Link href="/dashboard/salam" > salam </Link>
+    <Link href="/dashboard/users" > Users </Link>
 
     </>
     return (
