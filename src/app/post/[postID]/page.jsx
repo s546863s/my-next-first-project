@@ -43,8 +43,8 @@ const PostDetails = async ({params}) => {
     
     
     return (
-        <div>
-            <h1 className="btn btn-error">{post.id}</h1>
+        <div className="space-y-7">
+            <h1 className="btn btn-disabled">{post.id}</h1>
             <h1 className="text-2xl font-black">{post.title}</h1>
             <h1 className="text-2xl font-semibold">{post.content}</h1>
             <Link className="btn btn-secondary" href={`/post`}>Go Back</Link>
